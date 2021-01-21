@@ -41,10 +41,29 @@ class Airplane {
           + It should return a string with `name` and `age`. Example: "Mary, 50"
   */
   
- class Person(name, age) {
-    
+ class Person {
+  Constructor(name, age){
+    this.name = name;
+    this.age = age;
+    this.stomach = [];
   }
   
+  Person.prototype.eat = function(someFood){
+    this.stomach.push(someFood);
+    if (this.stomach.length < 10){
+
+    }
+  }
+
+  Person.prototype.poop = function(){
+
+  }
+
+  Person.prototype.toString = function(){
+    return `${this.name}, ${this.age}`;
+  }
+}
+
   /*
     TASK 2
       - Write a Car class whose constructor initializes `model` and `milesPerGallon` from arguments.
@@ -59,7 +78,7 @@ class Airplane {
           + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
   */
   
- class Car {
+ class Car(model, milesPerGallon){
     
   }
   
