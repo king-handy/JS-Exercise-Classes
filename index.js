@@ -49,8 +49,9 @@ class Airplane {
   }
   
   eat(){
+    let someFood = 'someFood';
     if (this.stomach.length === 9){
-      
+      this.stomach = [];
     } else {
       this.stomach.push(someFood);
     }
@@ -79,25 +80,25 @@ class Airplane {
           + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
   */
   
- class Car{
+ class Car {
     constructor(model, milesPerGallon){
       this.model = model;
       this.milesPerGallon = milesPerGallon;
       this.tank = 0;
       this.odometer = 0;
     }
-  }
 
-  fill(){
-    
-  }
-  Car.fill(gallons);
-
-  drive(){
-    if (this.tank === 0){
-      return `I ran out of fuel at ${this.odometer}.`
-    } else {
-
+    fill(gallons){
+      this.gallons = this.tank++;
+    }
+      
+    drive(){
+      this.gallons = tank++;
+      if (this.tank === 0){
+        return `I ran out of fuel at ${this.odometer}.`
+      } else {
+        return this.odometer++;
+      }
     }
   }
   
@@ -117,10 +118,10 @@ class Airplane {
     constructor(object){
       this.object = ['name', 'age', 'location'];
     }
-  }
 
-  speak(){
-    return `Hello my name is ${name}, I am from ${location}`
+    speak(){
+      return `Hello my name is ${name}, I am from ${location}`
+    }
   }
   
   /*
@@ -139,9 +140,18 @@ class Airplane {
   */
  class Instructor {
   constructor (object){
-
+    object = ['name', 'age', 'location', 'specialty', 'favLanguage', 'catchPhrase'];
   }
- }
+
+  demo(subject) {
+    return `Today we are learning about ${this.subject}`
+  }
+  
+  grade() {
+    return `${student.name} receives a perfect score on ${this.subject}`
+  }
+}
+
   /*
     TASK 5
       - Write a Student class extending Lambdasian.
@@ -158,9 +168,16 @@ class Airplane {
           + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
   */
  class Student {
-     constructor(object){
-
-     }
+    constructor(object){
+    this.object = ['name', 'age', 'location', 'previousBackground', 'className', 'favSubjects'];
+    }
+    listSubjects() {
+    return `Loving HTML, CSS, JS!`;
+    }
+  
+    PRAssignment() {
+    return `${student.name} has submitted a PR for ${subject}`
+    }
  }
   
   /*
